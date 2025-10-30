@@ -26,7 +26,7 @@ export default function Hero({
   backgroundImage,
   backgroundVideo,
   title = "Neagu Ionut - Spécialiste rénovation intérieure en Île-de-France",
-  description = "Auto-entrepreneur spécialisé dans le secteur du BTP : rénovation intérieure, plomberie, salle de bain et carrelage. Votre partenaire de confiance pour tous vos projets de rénovation en Île-de-France.",
+  description = "Auto-entrepreneur spécialisé dans le secteur du BTP et de la rénovation : expert en rénovation intérieure, plomberie, salle de bain et carrelage. Votre partenaire de confiance pour tous vos projets dans le secteur du bâtiment en Île-de-France.",
   bulletPoints = [
     "Auto-entrepreneur depuis 2022",
     "Expert en rénovation intérieure",
