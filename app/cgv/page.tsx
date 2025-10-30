@@ -3,6 +3,15 @@
 import { motion } from 'framer-motion';
 import { FileText, Shield, AlertCircle, Calendar } from 'lucide-react';
 import { config } from '@/lib/config';
+import { generateMetadata } from '@/lib/seo-config';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = generateMetadata(
+  "Conditions Générales de Vente - RAFCOM",
+  "Conditions générales de vente de RAFCOM pour les services de débouchage de gaines télécommunications et interventions techniques en Île-de-France.",
+  "/og-image.jpg",
+  "/cgv"
+);
 
 export default function CGVPage() {
   return (

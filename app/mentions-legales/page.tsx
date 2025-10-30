@@ -3,6 +3,15 @@
 import { motion } from 'framer-motion';
 import { Building, Mail } from 'lucide-react';
 import { config } from '@/lib/config';
+import { generateMetadata } from '@/lib/seo-config';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = generateMetadata(
+  "Mentions Légales - RAFCOM",
+  "Mentions légales de RAFCOM, spécialiste en débouchage de gaines télécommunications et interventions techniques en Île-de-France.",
+  "/og-image.jpg",
+  "/mentions-legales"
+);
 
 export default function MentionsLegalesPage() {
   return (
