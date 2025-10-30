@@ -14,28 +14,28 @@ export interface SEOConfig {
 }
 
 export const seoConfig: SEOConfig = {
-  title: "Neagu Ionut - Rénovation Intérieure & Plomberie en Île-de-France",
-  description: "Neagu Ionut, auto-entrepreneur spécialisé en rénovation intérieure, plomberie, salle de bain et carrelage. Devis gratuit en Île-de-France, Hauts-de-Seine.",
+  title: "RAFCOM - Débouchage Gaines Télécommunications en Île-de-France",
+  description: "RAFCOM, expert en débouchage de gaines télécommunications et interventions techniques spécialisées. Devis gratuit en Île-de-France, Paris.",
   keywords: [
-    "rénovation intérieure Île-de-France",
-    "plomberie Hauts-de-Seine",
-    "salle de bain Suresnes",
-    "carrelage 92150",
-    "artisan rénovation Paris",
-    "plombier Suresnes",
-    "rénovation appartement",
-    "travaux salle de bain",
-    "pose carrelage",
-    "installation plomberie",
+    "débouchage gaines télécommunications Île-de-France",
+    "maintenance télécoms Paris",
+    "installation réseau 75015",
+    "interventions techniques télécoms",
+    "expert télécommunications Paris",
+    "débouchage gaines Paris",
+    "maintenance réseau télécom",
+    "installation télécommunications",
+    "services télécoms",
+    "réparation réseau",
     "devis gratuit",
-    "Neagu Ionut",
-    "travaux maison",
-    "rénovation BTP",
-    "auto-entrepreneur bâtiment"
+    "RAFCOM",
+    "Rafik Hamel",
+    "télécommunications Île-de-France",
+    "auto-entrepreneur télécoms"
   ],
-  author: "Neagu Ionut",
-  siteUrl: "https://neagu-ionut.fr",
-  siteName: "Neagu Ionut - Rénovation Intérieure",
+  author: "Rafik Hamel",
+  siteUrl: "https://rafcom.net",
+  siteName: "RAFCOM - Télécommunications",
   locale: "fr_FR",
   type: "website",
   image: "/og-image.jpg",
@@ -116,28 +116,28 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": `${seoConfig.siteUrl}#organization`,
-  "name": "Neagu Ionut",
-  "legalName": "Neagu Ionut - Entreprise de rénovation",
+  "name": "RAFCOM",
+  "legalName": "RAFCOM - Spécialiste télécommunications",
   "url": seoConfig.siteUrl,
   "logo": `${seoConfig.siteUrl}/logo.png`,
   "image": `${seoConfig.siteUrl}/og-image.jpg`,
   "description": seoConfig.description,
   "founder": {
     "@type": "Person",
-    "name": "Neagu Ionut"
+    "name": "Rafik Hamel"
   },
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Suresnes",
-    "postalCode": "92150",
+    "addressLocality": "Paris",
+    "postalCode": "75015",
     "addressRegion": "Île-de-France",
     "addressCountry": "FR"
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+33758850226",
+    "telephone": "+33783490136",
     "contactType": "customer service",
-    "email": "idarenovation2022@gmail.com",
+    "email": "contact@rafcom.net",
     "availableLanguage": "French"
   },
   "areaServed": [
@@ -147,19 +147,19 @@ export const organizationSchema = {
     },
     {
       "@type": "AdministrativeArea", 
-      "name": "Hauts-de-Seine"
+      "name": "Paris"
     },
     {
       "@type": "City",
-      "name": "Suresnes"
+      "name": "Paris 15ème"
     }
   ],
   "serviceType": [
-    "Rénovation intérieure",
-    "Plomberie", 
-    "Salle de bain",
-    "Carrelage",
-    "Travaux BTP"
+    "Débouchage gaines télécommunications",
+    "Maintenance télécoms", 
+    "Installation réseau",
+    "Interventions techniques",
+    "Services télécommunications"
   ],
   "priceRange": "€€",
   "openingHours": "Mo-Fr 08:00-18:00",
@@ -172,29 +172,29 @@ export const organizationSchema = {
 export const servicesSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "serviceType": "Construction Services",
+  "serviceType": "Telecommunications Services",
   "provider": {
     "@id": `${seoConfig.siteUrl}#organization`
   },
   "areaServed": organizationSchema.areaServed,
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Services de construction",
+    "name": "Services télécommunications",
     "itemListElement": [
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Rénovation intérieure",
-          "description": "Rénovation complète d'appartements et maisons, cloisons, sols, peinture"
+          "name": "Débouchage gaines télécommunications",
+          "description": "Débouchage professionnel de gaines télécommunications, intervention rapide et efficace"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service", 
-          "name": "Plomberie et salle de bain",
-          "description": "Installation plomberie, création salle de bain, pose carrelage"
+          "name": "Maintenance et installation télécoms",
+          "description": "Maintenance préventive, installation réseau, interventions techniques spécialisées"
         }
       }
     ]

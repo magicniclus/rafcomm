@@ -21,50 +21,50 @@ export default function Home() {
   });
   const servicesData = [
     {
-      title: "Rénovation Intérieure",
-      subtitle: "Transformation complète de vos espaces",
-      content: "Rénovation complète d'appartements et maisons : cloisons, sols, peinture, électricité. Nous transformons vos espaces selon vos besoins et votre style.",
+      title: "Débouchage Gaines Télécoms",
+      subtitle: "Intervention technique spécialisée",
+      content: "Débouchage professionnel de gaines télécommunications. Intervention rapide et efficace pour rétablir la circulation dans vos réseaux télécoms.",
       image: "/placo.png",
       gradientFrom: "#ff7e5f",
       gradientTo: "#feb47b",
-      href: "/services/renovation-interieure"
+      href: "/services/debouchage-gaines"
     },
     {
-      title: "Plomberie",
-      subtitle: "Installation et réparation",
-      content: "Installation et réparation de systèmes de plomberie : canalisations, robinetterie, chauffe-eau. Intervention rapide pour tous vos problèmes de plomberie.",
+      title: "Maintenance Télécoms",
+      subtitle: "Entretien et réparation",
+      content: "Maintenance préventive et curative de vos installations télécommunications. Intervention technique pour assurer la continuité de vos services.",
       image: "/plomberie.png",
       gradientFrom: "#667eea",
       gradientTo: "#764ba2",
-      href: "/services/plomberie"
+      href: "/services/maintenance-telecoms"
     },
     {
-      title: "Salle de Bain",
-      subtitle: "Aménagement sur mesure",
-      content: "Création et rénovation de salles de bain complètes : carrelage, sanitaires, douche, baignoire. Design moderne et fonctionnel adapté à vos besoins.",
+      title: "Installation Réseau",
+      subtitle: "Déploiement technique",
+      content: "Installation et déploiement de réseaux télécommunications. Solutions techniques adaptées à vos besoins de connectivité.",
       image: "/maison-work.png",
       gradientFrom: "#28a745",
       gradientTo: "#20c997",
-      href: "/services/salle-de-bain"
+      href: "/services/installation-reseau"
     },
     {
-      title: "Carrelage",
-      subtitle: "Pose professionnelle",
-      content: "Pose de carrelage sol et mur, faïence, mosaïque. Travail soigné avec finitions parfaites pour tous types de revêtements céramiques.",
+      title: "Interventions Techniques",
+      subtitle: "Expertise spécialisée",
+      content: "Interventions techniques spécialisées dans le domaine des télécommunications. Service professionnel et réactif pour tous vos besoins techniques.",
       image: "/mur.png",
       gradientFrom: "#fd7e14",
       gradientTo: "#ffc107",
-      href: "/services/carrelage"
+      href: "/services/interventions-techniques"
     }
   ];
 
 
 
   const contactInfo = {
-    address: "92150 Suresnes\nÎle-de-France\nRayon d'intervention : Hauts-de-Seine",
-    phone: "07 58 85 02 26",
-    email: "idarenovation2022@gmail.com",
-    mapEmbedUrl: "https://maps.google.com/maps?q=Suresnes,France&t=&z=12&ie=UTF8&iwloc=&output=embed"
+    address: "Paris (75015)\nÎle-de-France\nRayon d'intervention : Paris et banlieue",
+    phone: "07 83 49 01 36",
+    email: "contact@rafcom.net",
+    mapEmbedUrl: "https://maps.google.com/maps?q=Paris+75015,France&t=&z=12&ie=UTF8&iwloc=&output=embed"
   };
 
   return (
@@ -115,7 +115,7 @@ export default function Home() {
       <TeamSection config={config.team} />
       <ContactSection 
         title="Contactez-nous"
-        subtitle="Parlons de votre projet de rénovation intérieure, plomberie, salle de bain ou carrelage en Île-de-France"
+        subtitle="Parlons de votre projet de débouchage de gaines télécommunications ou d'interventions techniques en Île-de-France"
         contactInfo={contactInfo} 
       />
 

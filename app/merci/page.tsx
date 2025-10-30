@@ -80,7 +80,7 @@ export default function MerciPage() {
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Analyse de votre demande</h3>
                 <p className="text-gray-600 text-sm">
-                  Nous étudions votre projet et sélectionnons les artisans les plus adaptés à vos besoins.
+                  Nous étudions votre demande d'intervention technique et préparons notre intervention.
                 </p>
               </div>
             </motion.div>
@@ -97,7 +97,7 @@ export default function MerciPage() {
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Prise de contact sous 24h</h3>
                 <p className="text-gray-600 text-sm">
-                  Un de nos conseillers vous contacte pour affiner votre projet et planifier les interventions.
+                  Notre équipe RAFCOM vous contacte pour affiner votre demande et planifier l'intervention technique.
                 </p>
               </div>
             </motion.div>
@@ -112,9 +112,9 @@ export default function MerciPage() {
                 <span className="text-orange-600 font-bold text-sm">3</span>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 mb-1">Devis personnalisés</h3>
+                <h3 className="font-semibold text-gray-900 mb-1">Devis personnalisé</h3>
                 <p className="text-gray-600 text-sm">
-                  Recevez jusqu'à 3 devis détaillés de professionnels qualifiés et certifiés.
+                  Recevez un devis détaillé pour votre intervention télécommunications.
                 </p>
               </div>
             </motion.div>
@@ -136,7 +136,7 @@ export default function MerciPage() {
                   <Phone className="h-5 w-5 text-orange-600" />
                 </div>
                 <div>
-                  <p className="font-medium text-gray-900">01 23 45 67 89</p>
+                  <p className="font-medium text-gray-900">07 83 49 01 36</p>
                   <p className="text-sm text-gray-600">Lun-Ven 9h-18h</p>
                 </div>
               </div>
@@ -145,7 +145,7 @@ export default function MerciPage() {
                   <Mail className="h-5 w-5 text-orange-600" />
                 </div>
                 <div>
-                  <p className="font-medium text-gray-900">contact@trouvermonchantier.fr</p>
+                  <p className="font-medium text-gray-900">contact@rafcom.net</p>
                   <p className="text-sm text-gray-600">Réponse sous 2h</p>
                 </div>
               </div>

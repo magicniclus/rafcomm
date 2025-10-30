@@ -25,12 +25,12 @@ export default function Hero({
   config,
   backgroundImage,
   backgroundVideo,
-  title = "Neagu Ionut - Spécialiste rénovation intérieure en Île-de-France",
-  description = "Auto-entrepreneur spécialisé dans le secteur du BTP et de la rénovation : expert en rénovation intérieure, plomberie, salle de bain et carrelage. Votre partenaire de confiance pour tous vos projets dans le secteur du bâtiment en Île-de-France.",
+  title = "RAFCOM - Spécialiste débouchage gaines télécommunications en Île-de-France",
+  description = "Expert en débouchage de gaines télécommunications et interventions techniques spécialisées. Votre partenaire de confiance pour tous vos projets télécoms en Île-de-France.",
   bulletPoints = [
-    "Auto-entrepreneur depuis 2022",
-    "Expert en rénovation intérieure",
-    "Intervention en Île-de-France (92150)"
+    "Spécialiste télécommunications",
+    "Expert en débouchage de gaines",
+    "Intervention en Île-de-France (Paris 75015)"
   ],
   googleReviewsWidget
 }: HeroProps) {

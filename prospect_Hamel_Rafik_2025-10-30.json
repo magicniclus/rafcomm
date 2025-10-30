@@ -1,0 +1,41 @@
+{
+  "id": "gPO95HhYLgTS90uz1B6x",
+  "informationsPersonnelles": {
+    "nom": "Rafik",
+    "prenom": "Hamel",
+    "email": "contact@rafcom.net",
+    "telephone": "0783490136",
+    "etape": "R2",
+    "date": {
+      "type": "firestore/timestamp/1.0",
+      "seconds": 1761748372,
+      "nanoseconds": 797000000
+    },
+    "rgpd": true,
+    "commentaire": "Debouchage gaine télécom, https://www.rafcom.net/, rafcomm.fr  R2"
+  },
+  "informationsEntreprise": {
+    "nomEntreprise": "RAFCOM",
+    "entreprise": "RAFCOM",
+    "metier": "Autre",
+    "secteurActivite": "Autre",
+    "raisonSociale": "",
+    "anneeCreation": "",
+    "nombreCollaborateurs": "1",
+    "prestation": "Autre",
+    "rayonIntervention": "Paris (75015)",
+    "certifications": "",
+    "garanties": "",
+    "partenaires": ""
+  },
+  "siteWebEtCommunication": {
+    "siteWebExistant": false,
+    "siteWebURL": "",
+    "logo": false,
+    "sitePret": false
+  },
+  "metadonnees": {
+    "dateExport": "2025-10-30T14:12:05.822Z",
+    "exportePar": "Admin Trouver Mon Chantier"
+  }
+}

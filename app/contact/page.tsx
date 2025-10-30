@@ -45,11 +45,11 @@ export default function ContactPage() {
   };
 
   const contactInfo = {
-    address: "Zone d'intervention :\n92150 Suresnes\nÎle-de-France\nHauts-de-Seine",
-    phone: "07 58 85 02 26",
-    email: "idarenovation2022@gmail.com",
+    address: "Zone d'intervention :\nParis (75015)\nÎle-de-France\nParis et banlieue",
+    phone: "07 83 49 01 36",
+    email: "contact@rafcom.net",
     hours: "Lundi - Vendredi: 8h00 - 18h00\nSamedi: 8h00 - 12h00",
-    mapEmbedUrl: "https://maps.google.com/maps?q=Suresnes,France&t=&z=12&ie=UTF8&iwloc=&output=embed"
+    mapEmbedUrl: "https://maps.google.com/maps?q=Paris+75015,France&t=&z=12&ie=UTF8&iwloc=&output=embed"
   };
 
   return (
@@ -70,7 +70,7 @@ export default function ContactPage() {
               Contactez-nous
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-              Un projet de rénovation intérieure, plomberie ou carrelage ? Notre équipe est là pour vous accompagner en Île-de-France.
+              Un projet de débouchage de gaines télécommunications ou d'interventions techniques ? Notre équipe RAFCOM est là pour vous accompagner en Île-de-France.
             </p>
           </motion.div>
         </div>
@@ -306,7 +306,7 @@ export default function ContactPage() {
               Besoin d'un devis rapide ?
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              Appelez-nous directement pour obtenir une estimation gratuite de vos travaux.
+              Appelez-nous directement pour obtenir une estimation gratuite de vos interventions techniques.
             </p>
             <Button
               size="lg"
