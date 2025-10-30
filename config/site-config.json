@@ -13,8 +13,8 @@
     "subtitle": "Expert en rénovation intérieure, plomberie, salle de bain et carrelage. Votre partenaire de confiance pour tous vos projets de rénovation dans le secteur du BTP en Île-de-France.",
     "buttonText": "Demander un devis",
     "buttonHref": "#contact",
-    "backgroundImage": "/maison-hero.png",
-    "backgroundVideo": ""
+    "backgroundImage": "",
+    "backgroundVideo": "/video.mp4"
   },
   "about": {
     "sections": [
@@ -23,7 +23,7 @@
         "title": "Spécialiste de la rénovation intérieure",
         "subtitle": "Plus de 3 ans d'expérience dans le secteur du BTP",
         "content": "Notre entreprise, Neagu Ionut, est spécialisée dans la rénovation intérieure depuis 2022. Nous mettons notre expertise au service de vos projets de rénovation, qu'il s'agisse de plomberie, de salles de bain ou de carrelage. Notre mission : apporter un travail soigné, durable et de qualité, dans le respect des délais et des normes en Île-de-France.",
-        "image": "/maison-1.png",
+        "image": "/maison-work.png",
         "gradientFrom": "#ff7e5f",
         "gradientTo": "#feb47b",
         "buttonText": "Voir nos réalisations",
@@ -35,7 +35,7 @@
         "title": "Rénovation complète et plomberie",
         "subtitle": "Expert en salle de bain et carrelage",
         "content": "Ce qui nous distingue, c'est notre expertise technique, notre rigueur et notre relation de confiance avec nos clients. Chaque chantier est pour nous une nouvelle occasion de prouver que la rénovation intérieure peut allier qualité et modernité. Nous maîtrisons parfaitement les normes de sécurité et de construction en vigueur.",
-        "image": "/maison-2.png",
+        "image": "/plomberie.png",
         "gradientFrom": "#667eea",
         "gradientTo": "#764ba2",
         "buttonText": "Contactez-nous",

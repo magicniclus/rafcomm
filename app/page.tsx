@@ -32,7 +32,7 @@ export default function Home() {
       title: "Plomberie",
       subtitle: "Installation et réparation",
       content: "Installation et réparation de systèmes de plomberie : canalisations, robinetterie, chauffe-eau. Intervention rapide pour tous vos problèmes de plomberie.",
-      image: "/menuiserie.png",
+      image: "/plomberie.png",
       gradientFrom: "#667eea",
       gradientTo: "#764ba2"
     },
