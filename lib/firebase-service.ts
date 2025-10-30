@@ -32,7 +32,7 @@ export const submitFormToFirebase = async (formData: FormData): Promise<string> 
     const docRef = await addDoc(projetsCollection, docData);
     console.log('Document written with ID: ', docRef.id);
     
-    // Send email notification via API route
+    // Send email notification via API route (optional)
     try {
       const emailData = {
         ...formData,
@@ -50,10 +50,12 @@ export const submitFormToFirebase = async (formData: FormData): Promise<string> 
       if (response.ok) {
         console.log('Email notification sent successfully');
       } else {
-        console.error('Failed to send email notification');
+        // Silently fail - email is optional, form submission is the priority
+        console.warn('Email notification service unavailable - form data saved successfully');
       }
     } catch (emailError) {
-      console.error('Failed to send email notification:', emailError);
+      // Silently fail - email is optional, form submission is the priority
+      console.warn('Email notification service unavailable - form data saved successfully');
       // Don't throw error - form submission should still succeed even if email fails
     }
     

@@ -1,4 +1,5 @@
-import ServicePage, { generateServiceMetadata } from '@/components/ServicePage';
+import ServicePage from '@/components/ServicePage';
+import { generateServiceMetadata } from '@/lib/service-metadata';
 import { Metadata } from 'next';
 
 // Configuration de la page plomberie
@@ -62,13 +63,15 @@ const plomberieConfig = {
   // Avantages/Points forts
   advantages: [
     "Intervention rapide sous 24h",
-    "Devis gratuit et détaillé",
+    "Devis gratuit et personnalisé",
     "Matériaux de qualité professionnelle",
     "Garantie sur tous les travaux",
-    "Tarifs transparents et compétitifs",
+    "Tarification transparente",
     "Artisan expérimenté et qualifié",
     "Respect des normes en vigueur",
-    "Service après-vente assuré"
+    "Service après-vente assuré",
+    "Estimation gratuite et sans engagement",
+    "Conseil personnalisé"
   ],
   
   // Zone d'intervention
@@ -90,29 +93,6 @@ const plomberieConfig = {
     address: "92150 Suresnes, Île-de-France"
   },
   
-  // Prix indicatifs
-  pricing: [
-    {
-      title: "Dépannage simple",
-      description: "Réparation fuite, changement joint",
-      priceRange: "80-150€"
-    },
-    {
-      title: "Installation robinet",
-      description: "Pose mitigeur ou robinet standard",
-      priceRange: "120-200€"
-    },
-    {
-      title: "Installation WC",
-      description: "Dépose/pose WC complet",
-      priceRange: "200-350€"
-    },
-    {
-      title: "Chauffe-eau électrique",
-      description: "Remplacement chauffe-eau 200L",
-      priceRange: "800-1200€"
-    }
-  ]
 };
 
 // Génération des métadonnées SEO

@@ -5,8 +5,6 @@ import { motion } from 'framer-motion';
 import { Check, Phone, Mail, MapPin, Star, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
 import { submitFormToFirebase, validateFormData, FormData } from '@/lib/firebase-service';
 import FormLoader from '@/components/FormLoader';
 import { useRouter } from 'next/navigation';
@@ -164,7 +162,6 @@ export default function ServicePage({
         }}
       />
 
-      <Navigation />
 
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
@@ -550,39 +547,6 @@ export default function ServicePage({
       {/* Form Loader */}
       <FormLoader isVisible={showLoader} stage={loaderStage} />
 
-      <Footer />
     </div>
   );
-}
-
-// Fonction utilitaire pour générer les métadonnées SEO
-export function generateServiceMetadata(
-  serviceName: string,
-  location: string,
-  description: string,
-  keywords: string[]
-): Metadata {
-  const title = `${serviceName} ${location} - NEAGU LONUT | Devis Gratuit`;
-  const metaDescription = `${description} Intervention rapide en ${location}. Devis gratuit et personnalisé.`;
-
-  return {
-    title,
-    description: metaDescription,
-    keywords: keywords.join(', '),
-    openGraph: {
-      title,
-      description: metaDescription,
-      type: 'website',
-      locale: 'fr_FR',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description: metaDescription,
-    },
-    robots: {
-      index: true,
-      follow: true,
-    },
-  };
 }

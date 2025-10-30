@@ -1,4 +1,5 @@
-import ServicePage, { generateServiceMetadata } from '@/components/ServicePage';
+import ServicePage from '@/components/ServicePage';
+import { generateServiceMetadata } from '@/lib/service-metadata';
 import { Metadata } from 'next';
 
 // Configuration de la page salle de bain
@@ -62,13 +63,15 @@ const salleDeBainConfig = {
   // Avantages/Points forts
   advantages: [
     "Projet clé en main de A à Z",
-    "Devis détaillé et gratuit",
+    "Devis gratuit et personnalisé",
     "Matériaux haut de gamme",
     "Respect des délais convenus",
-    "Garantie décennale",
-    "Conseils personnalisés",
-    "Finitions soignées",
-    "Suivi post-travaux"
+    "Garantie sur tous les travaux",
+    "Conseils personnalisés et suivi",
+    "Finitions soignées et durables",
+    "Suivi post-travaux assuré",
+    "Tarification transparente",
+    "Estimation gratuite et sans engagement"
   ],
   
   // Zone d'intervention
@@ -90,29 +93,6 @@ const salleDeBainConfig = {
     address: "92150 Suresnes, Île-de-France"
   },
   
-  // Prix indicatifs
-  pricing: [
-    {
-      title: "Rénovation simple",
-      description: "Carrelage + peinture + robinetterie",
-      priceRange: "3000-5000€"
-    },
-    {
-      title: "Rénovation complète",
-      description: "Plomberie + carrelage + sanitaires",
-      priceRange: "8000-12000€"
-    },
-    {
-      title: "Création salle de bain",
-      description: "Projet neuf avec douche italienne",
-      priceRange: "12000-18000€"
-    },
-    {
-      title: "Douche à l'italienne",
-      description: "Transformation baignoire en douche",
-      priceRange: "4000-7000€"
-    }
-  ]
 };
 
 // Génération des métadonnées SEO

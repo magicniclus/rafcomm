@@ -10,6 +10,12 @@ export interface EmailData extends FormData {
 }
 
 export const sendProspectEmail = async (prospectData: EmailData): Promise<void> => {
+  // Check if SendGrid is configured
+  if (!process.env.SENDGRID_API_KEY) {
+    console.warn('SendGrid API key not configured - email notifications disabled');
+    throw new Error('Email service not configured');
+  }
+  
   try {
     const logoUrl = 'https://firebasestorage.googleapis.com/v0/b/trouvermonchantier.firebasestorage.app/o/logo.png?alt=media&token=becd91c3-7d25-4ac2-80a9-6a6c796bd021';
     

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface ServiceCard {
   title: string;
@@ -10,6 +11,7 @@ interface ServiceCard {
   image?: string;
   gradientFrom?: string;
   gradientTo?: string;
+  href?: string;
 }
 
 interface ServicesSectionProps {
@@ -59,49 +61,60 @@ export default function ServicesSection({
           cards.length === 3 ? 'md:grid-cols-2 lg:grid-cols-3' :
           'md:grid-cols-2 lg:grid-cols-3'
         }`}>
-          {cards.map((card, index) => (
-            <motion.div
-              key={index}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
-            >
-              <div className="flex flex-col md:flex-row h-full">
-                {/* Left side - Image or Gradient */}
-                <div className="w-full md:w-1/3 h-48 md:h-auto relative">
-                  {card.image ? (
-                    <Image
-                      src={card.image}
-                      alt={card.title}
-                      fill
-                      className="object-cover"
-                    />
-                  ) : (
-                    <div
-                      className="w-full h-full"
-                      style={getBackgroundStyle(card)}
-                    />
-                  )}
-                </div>
+          {cards.map((card, index) => {
+            const CardContent = (
+              <motion.div
+                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden h-full"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -5 }}
+              >
+                <div className="flex flex-col md:flex-row h-full">
+                  {/* Left side - Image or Gradient */}
+                  <div className="w-full md:w-1/3 h-48 md:h-auto relative">
+                    {card.image ? (
+                      <Image
+                        src={card.image}
+                        alt={card.title}
+                        fill
+                        className="object-cover"
+                      />
+                    ) : (
+                      <div
+                        className="w-full h-full"
+                        style={getBackgroundStyle(card)}
+                      />
+                    )}
+                  </div>
 
-                {/* Right side - Content */}
-                <div className="flex-1 p-6 flex flex-col justify-center">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {card.title}
-                  </h3>
-                  <h4 className="text-lg font-medium text-orange-500 mb-3">
-                    {card.subtitle}
-                  </h4>
-                  <p className="text-gray-600 leading-relaxed">
-                    {card.content}
-                  </p>
+                  {/* Right side - Content */}
+                  <div className="flex-1 p-6 flex flex-col justify-center">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      {card.title}
+                    </h3>
+                    <h4 className="text-lg font-medium text-orange-500 mb-3">
+                      {card.subtitle}
+                    </h4>
+                    <p className="text-gray-600 leading-relaxed">
+                      {card.content}
+                    </p>
+                  </div>
                 </div>
+              </motion.div>
+            );
+
+            return card.href ? (
+              <Link key={index} href={card.href} className="block h-full">
+                {CardContent}
+              </Link>
+            ) : (
+              <div key={index}>
+                {CardContent}
               </div>
-            </motion.div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
