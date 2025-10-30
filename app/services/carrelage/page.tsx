@@ -21,7 +21,7 @@ const carrelageConfig = {
   
   // Contenu principal
   serviceName: "Carrelage",
-  heroImage: "/facade.png",
+  heroImage: "/mur.png",
   heroTitle: "Pose de Carrelage Professionnelle",
   heroSubtitle: "Expert en pose de carrelage, faïence et mosaïque en Île-de-France. Finitions parfaites avec devis gratuit et personnalisé.",
   

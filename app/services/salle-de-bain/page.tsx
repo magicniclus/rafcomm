@@ -21,7 +21,7 @@ const salleDeBainConfig = {
   
   // Contenu principal
   serviceName: "Rénovation Salle de Bain",
-  heroImage: "/extension.png", // Utilisation d'une image existante
+  heroImage: "/maison-work.png",
   heroTitle: "Rénovation de Salle de Bain sur Mesure",
   heroSubtitle: "Création et rénovation complète de salles de bain en Île-de-France. Du design à la réalisation, nous vous accompagnons dans votre projet.",
   

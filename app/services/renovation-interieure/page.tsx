@@ -21,7 +21,7 @@ const renovationInterieurConfig = {
   
   // Contenu principal
   serviceName: "Rénovation Intérieure",
-  heroImage: "/macon.png",
+  heroImage: "/placo.png",
   heroTitle: "Rénovation Intérieure Complète",
   heroSubtitle: "Transformation et aménagement de vos espaces intérieurs en Île-de-France. Projet clé en main avec devis gratuit et personnalisé.",
   

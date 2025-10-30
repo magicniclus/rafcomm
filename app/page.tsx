@@ -24,7 +24,7 @@ export default function Home() {
       title: "Rénovation Intérieure",
       subtitle: "Transformation complète de vos espaces",
       content: "Rénovation complète d'appartements et maisons : cloisons, sols, peinture, électricité. Nous transformons vos espaces selon vos besoins et votre style.",
-      image: "/macon.png",
+      image: "/placo.png",
       gradientFrom: "#ff7e5f",
       gradientTo: "#feb47b",
       href: "/services/renovation-interieure"
@@ -42,7 +42,7 @@ export default function Home() {
       title: "Salle de Bain",
       subtitle: "Aménagement sur mesure",
       content: "Création et rénovation de salles de bain complètes : carrelage, sanitaires, douche, baignoire. Design moderne et fonctionnel adapté à vos besoins.",
-      image: "/extension.png",
+      image: "/maison-work.png",
       gradientFrom: "#28a745",
       gradientTo: "#20c997",
       href: "/services/salle-de-bain"
@@ -51,7 +51,7 @@ export default function Home() {
       title: "Carrelage",
       subtitle: "Pose professionnelle",
       content: "Pose de carrelage sol et mur, faïence, mosaïque. Travail soigné avec finitions parfaites pour tous types de revêtements céramiques.",
-      image: "/facade.png",
+      image: "/mur.png",
       gradientFrom: "#fd7e14",
       gradientTo: "#ffc107",
       href: "/services/carrelage"
