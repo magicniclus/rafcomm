@@ -7,16 +7,16 @@ export function generateServiceMetadata(
   description: string,
   keywords: string[]
 ): Metadata {
-  const title = `${serviceName} ${location} - NEAGU LONUT | Devis Gratuit`;
+  const title = `${serviceName} ${location} - RAFCOM | Devis Gratuit`;
   const metaDescription = `${description} Intervention rapide en ${location}. Devis gratuit et personnalisé.`;
 
   return {
     title,
     description: metaDescription,
     keywords: keywords.join(', '),
-    authors: [{ name: 'NEAGU LONUT' }],
-    creator: 'NEAGU LONUT',
-    publisher: 'NEAGU LONUT',
+    authors: [{ name: 'RAFCOM' }],
+    creator: 'RAFCOM',
+    publisher: 'RAFCOM',
     formatDetection: {
       email: false,
       address: false,
@@ -27,7 +27,7 @@ export function generateServiceMetadata(
       description: metaDescription,
       type: 'website',
       locale: 'fr_FR',
-      siteName: 'NEAGU LONUT - Rénovation Intérieure',
+      siteName: 'RAFCOM - Télécommunications',
     },
     twitter: {
       card: 'summary_large_image',

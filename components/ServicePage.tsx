@@ -135,7 +135,7 @@ export default function ServicePage({
     "description": description,
     "provider": {
       "@type": "LocalBusiness",
-      "name": "NEAGU LONUT",
+      "name": "RAFCOM",
       "telephone": contactInfo.phone,
       "email": contactInfo.email,
       "address": {

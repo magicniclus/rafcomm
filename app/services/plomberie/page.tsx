@@ -88,9 +88,9 @@ const plomberieConfig = {
   
   // Informations de contact
   contactInfo: {
-    phone: "07 58 85 02 26",
-    email: "idarenovation2022@gmail.com",
-    address: "92150 Suresnes, Île-de-France"
+    phone: "07 83 49 01 36",
+    email: "contact@rafcom.net",
+    address: "Paris (75015), Île-de-France"
   },
   
 };
