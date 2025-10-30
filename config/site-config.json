@@ -13,8 +13,8 @@
     "subtitle": "Expert en débouchage de gaines télécommunications et interventions techniques spécialisées. Votre partenaire de confiance pour tous vos projets télécoms en Île-de-France.",
     "buttonText": "Demander un devis",
     "buttonHref": "#contact",
-    "backgroundImage": "",
-    "backgroundVideo": "/video.mp4"
+    "backgroundImage": "/bg.png",
+    "backgroundVideo": ""
   },
   "about": {
     "sections": [

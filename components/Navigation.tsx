@@ -87,21 +87,19 @@ export default function Navigation() {
           >
             <Link href="/" className="flex items-center space-x-2">
               <motion.div 
-                className="w-12 h-12 rounded-xl bg-slate-700 flex items-center justify-center shadow-lg overflow-hidden"
+                className="w-20 h-20 rounded-xl flex items-center justify-center  overflow-hidden"
                 whileHover={{ rotate: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <Image 
                   src="/logo.png" 
                   alt="Logo" 
-                  width={40} 
-                  height={40} 
+                  width={80} 
+                  height={80} 
                   className="object-contain"
                 />
               </motion.div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-gray-900">RAFCOM</span>
-                <span className="text-xs text-gray-600 font-medium">télécommunications</span>
               </div>
             </Link>
           </motion.div>
