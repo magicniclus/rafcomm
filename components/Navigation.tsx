@@ -81,7 +81,7 @@ export default function Navigation() {
                 />
               </motion.div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-gray-900">Neagu Ionut</span>
+                <span className="text-xl font-bold text-gray-900">NEAGU LONUT</span>
                 <span className="text-xs text-gray-600 font-medium">rénovation - plomberie</span>
               </div>
             </Link>
