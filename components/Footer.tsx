@@ -14,12 +14,19 @@ export default function Footer() {
     { name: 'Espace pro', href: 'https://app.trouver-mon-chantier.fr' },
   ];
 
+  const servicesLinks = [
+    { name: 'Rénovation Intérieure', href: '/services/renovation-interieure' },
+    { name: 'Plomberie', href: '/services/plomberie' },
+    { name: 'Salle de Bain', href: '/services/salle-de-bain' },
+    { name: 'Carrelage', href: '/services/carrelage' },
+  ];
+
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main footer content */}
         <div className="py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Logo and description */}
             <motion.div 
               className="space-y-4"
@@ -81,12 +88,35 @@ export default function Footer() {
               </ul>
             </motion.div>
 
+            {/* Services links */}
+            <motion.div 
+              className="space-y-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-lg font-semibold">Nos Prestations</h3>
+              <ul className="space-y-2">
+                {servicesLinks.map((service) => (
+                  <li key={service.name}>
+                    <a
+                      href={service.href}
+                      className="text-slate-300 hover:text-white text-sm transition-colors duration-200 hover:underline"
+                    >
+                      {service.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
             {/* Contact info */}
             <motion.div 
               className="space-y-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.25 }}
               viewport={{ once: true }}
             >
               <h3 className="text-lg font-semibold">Contact</h3>

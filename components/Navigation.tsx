@@ -1,10 +1,11 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Phone, User } from 'lucide-react';
+import { Menu, X, Phone, User, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import {
   NavigationMenu,
@@ -16,12 +17,30 @@ import {
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [showFloatingButton, setShowFloatingButton] = useState(false);
+  const [showServicesDropdown, setShowServicesDropdown] = useState(false);
+  const pathname = usePathname();
   const phoneNumber = "07 58 85 02 26";
 
-  const navigationLinks = [
+  // Détecter si on est sur la page d'accueil
+  const isHomePage = pathname === '/';
+
+  // Liste des services pour le dropdown
+  const servicesLinks = [
+    { name: 'Rénovation Intérieure', href: '/services/renovation-interieure' },
+    { name: 'Plomberie', href: '/services/plomberie' },
+    { name: 'Salle de Bain', href: '/services/salle-de-bain' },
+    { name: 'Carrelage', href: '/services/carrelage' },
+  ];
+
+  // Navigation adaptative selon la page
+  const navigationLinks = isHomePage ? [
     { name: 'Mon expertise', href: '#expertise' },
-    { name: 'Services', href: '#services' },
+    { name: 'Services', href: '#services', hasDropdown: true },
     { name: 'Mes réalisations', href: '#realisations' },
+  ] : [
+    { name: 'Mon expertise', href: '/#expertise' },
+    { name: 'Services', href: '/#services', hasDropdown: true },
+    { name: 'Mes réalisations', href: '/#realisations' },
   ];
 
   // Prevent body scroll when mobile menu is open
@@ -97,18 +116,70 @@ export default function Navigation() {
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                      className="relative"
                     >
-                      <NavigationMenuLink
-                        href={link.href}
-                        className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
-                      >
-                        <motion.span
-                          whileHover={{ scale: 1.05 }}
-                          transition={{ type: "spring", stiffness: 400 }}
+                      {link.hasDropdown ? (
+                        <div
+                          className="relative"
+                          onMouseEnter={() => setShowServicesDropdown(true)}
+                          onMouseLeave={() => setShowServicesDropdown(false)}
                         >
-                          {link.name}
-                        </motion.span>
-                      </NavigationMenuLink>
+                          <NavigationMenuLink
+                            href={link.href}
+                            className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                          >
+                            <motion.span
+                              whileHover={{ scale: 1.05 }}
+                              transition={{ type: "spring", stiffness: 400 }}
+                              className="flex items-center space-x-1"
+                            >
+                              <span>{link.name}</span>
+                              <ChevronDown className={`h-3 w-3 transition-transform duration-200 ${showServicesDropdown ? 'rotate-180' : ''}`} />
+                            </motion.span>
+                          </NavigationMenuLink>
+                          
+                          {/* Dropdown Menu */}
+                          <AnimatePresence>
+                            {showServicesDropdown && (
+                              <motion.div
+                                initial={{ opacity: 0, y: -10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -10 }}
+                                transition={{ duration: 0.2 }}
+                                className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
+                              >
+                                {servicesLinks.map((service, serviceIndex) => (
+                                  <Link
+                                    key={service.name}
+                                    href={service.href}
+                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-orange-500 transition-colors duration-200"
+                                  >
+                                    <motion.div
+                                      initial={{ opacity: 0, x: -10 }}
+                                      animate={{ opacity: 1, x: 0 }}
+                                      transition={{ duration: 0.2, delay: serviceIndex * 0.05 }}
+                                    >
+                                      {service.name}
+                                    </motion.div>
+                                  </Link>
+                                ))}
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      ) : (
+                        <NavigationMenuLink
+                          href={link.href}
+                          className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                        >
+                          <motion.span
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ type: "spring", stiffness: 400 }}
+                          >
+                            {link.name}
+                          </motion.span>
+                        </NavigationMenuLink>
+                      )}
                     </motion.div>
                   </NavigationMenuItem>
                 ))}
@@ -233,23 +304,69 @@ export default function Navigation() {
             <div className="px-6 pt-8">
               <div className="space-y-6">
                 {navigationLinks.map((link, index) => (
-                  <motion.a
-                    key={link.name}
-                    href={link.href}
-                    className="block text-2xl font-medium text-foreground hover:text-primary transition-colors"
-                    onClick={() => setIsOpen(false)}
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ 
-                      delay: 0.1 + index * 0.1,
-                      type: "spring",
-                      damping: 25,
-                      stiffness: 300
-                    }}
-                    whileHover={{ x: 10 }}
-                  >
-                    {link.name}
-                  </motion.a>
+                  <div key={link.name}>
+                    {link.hasDropdown ? (
+                      <div>
+                        <motion.a
+                          href={link.href}
+                          className="block text-2xl font-medium text-foreground hover:text-primary transition-colors"
+                          onClick={() => setIsOpen(false)}
+                          initial={{ opacity: 0, x: 50 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ 
+                            delay: 0.1 + index * 0.1,
+                            type: "spring",
+                            damping: 25,
+                            stiffness: 300
+                          }}
+                          whileHover={{ x: 10 }}
+                        >
+                          {link.name}
+                        </motion.a>
+                        {/* Services submenu mobile */}
+                        <div className="ml-4 mt-3 space-y-3">
+                          {servicesLinks.map((service, serviceIndex) => (
+                            <motion.div
+                              key={service.name}
+                              initial={{ opacity: 0, x: 30 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              transition={{ 
+                                delay: 0.2 + index * 0.1 + serviceIndex * 0.05,
+                                type: "spring",
+                                damping: 25,
+                                stiffness: 300
+                              }}
+                            >
+                              <Link
+                                href={service.href}
+                                className="block text-lg text-gray-600 hover:text-orange-500 transition-colors"
+                                onClick={() => setIsOpen(false)}
+                              >
+                                {service.name}
+                              </Link>
+                            </motion.div>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      <motion.a
+                        href={link.href}
+                        className="block text-2xl font-medium text-foreground hover:text-primary transition-colors"
+                        onClick={() => setIsOpen(false)}
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ 
+                          delay: 0.1 + index * 0.1,
+                          type: "spring",
+                          damping: 25,
+                          stiffness: 300
+                        }}
+                        whileHover={{ x: 10 }}
+                      >
+                        {link.name}
+                      </motion.a>
+                    )}
+                  </div>
                 ))}
               </div>
             </div>
