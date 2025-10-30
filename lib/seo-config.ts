@@ -14,28 +14,28 @@ export interface SEOConfig {
 }
 
 export const seoConfig: SEOConfig = {
-  title: "Adbetton - Maçonnerie Générale & Pose de Menuiserie en Bretagne et Normandie",
-  description: "Adbetton, auto-entrepreneur spécialisé en maçonnerie générale (gros second œuvre) et pose de menuiserie. Devis gratuit en Ille-et-Vilaine, Côtes-d'Armor et Manche.",
+  title: "Neagu Ionut - Rénovation Intérieure & Plomberie en Île-de-France",
+  description: "Neagu Ionut, auto-entrepreneur spécialisé en rénovation intérieure, plomberie, salle de bain et carrelage. Devis gratuit en Île-de-France, Hauts-de-Seine.",
   keywords: [
-    "maçonnerie générale Bretagne",
-    "gros second œuvre Ille-et-Vilaine",
-    "pose menuiserie Côtes-d'Armor",
-    "artisan maçon Manche",
-    "construction Bretagne",
-    "maçon Rennes",
-    "menuiserie Saint-Brieuc",
-    "maçonnerie Cherbourg",
-    "gros œuvre",
-    "cloisons",
+    "rénovation intérieure Île-de-France",
+    "plomberie Hauts-de-Seine",
+    "salle de bain Suresnes",
+    "carrelage 92150",
+    "artisan rénovation Paris",
+    "plombier Suresnes",
+    "rénovation appartement",
+    "travaux salle de bain",
+    "pose carrelage",
+    "installation plomberie",
     "devis gratuit",
-    "Adbetton",
+    "Neagu Ionut",
     "travaux maison",
-    "garantie décennale",
+    "rénovation BTP",
     "auto-entrepreneur bâtiment"
   ],
-  author: "Adbetton",
-  siteUrl: "https://adbetton.fr",
-  siteName: "Adbetton - Maçonnerie Générale",
+  author: "Neagu Ionut",
+  siteUrl: "https://neagu-ionut.fr",
+  siteName: "Neagu Ionut - Rénovation Intérieure",
   locale: "fr_FR",
   type: "website",
   image: "/og-image.jpg",
@@ -116,48 +116,50 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": `${seoConfig.siteUrl}#organization`,
-  "name": "Adbetton",
-  "legalName": "Adbetton",
+  "name": "Neagu Ionut",
+  "legalName": "Neagu Ionut - Entreprise de rénovation",
   "url": seoConfig.siteUrl,
   "logo": `${seoConfig.siteUrl}/logo.png`,
   "image": `${seoConfig.siteUrl}/og-image.jpg`,
   "description": seoConfig.description,
   "founder": {
     "@type": "Person",
-    "name": "Adbetton"
+    "name": "Neagu Ionut"
   },
   "address": {
     "@type": "PostalAddress",
-    "addressRegion": "Bretagne",
+    "addressLocality": "Suresnes",
+    "postalCode": "92150",
+    "addressRegion": "Île-de-France",
     "addressCountry": "FR"
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+33749229392",
+    "telephone": "+33758850226",
     "contactType": "customer service",
-    "email": "adbetton32@gmail.com",
+    "email": "idarenovation2022@gmail.com",
     "availableLanguage": "French"
   },
   "areaServed": [
     {
       "@type": "AdministrativeArea",
-      "name": "Ille-et-Vilaine"
+      "name": "Île-de-France"
     },
     {
       "@type": "AdministrativeArea", 
-      "name": "Côtes-d'Armor"
+      "name": "Hauts-de-Seine"
     },
     {
-      "@type": "AdministrativeArea",
-      "name": "Manche"
+      "@type": "City",
+      "name": "Suresnes"
     }
   ],
   "serviceType": [
-    "Maçonnerie générale",
-    "Gros second œuvre", 
-    "Pose de menuiserie",
-    "Construction",
-    "Rénovation"
+    "Rénovation intérieure",
+    "Plomberie", 
+    "Salle de bain",
+    "Carrelage",
+    "Travaux BTP"
   ],
   "priceRange": "€€",
   "openingHours": "Mo-Fr 08:00-18:00",
@@ -183,16 +185,16 @@ export const servicesSchema = {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Maçonnerie générale",
-          "description": "Élévation de murs, cloisons, dalles, chapes, gros second œuvre"
+          "name": "Rénovation intérieure",
+          "description": "Rénovation complète d'appartements et maisons, cloisons, sols, peinture"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service", 
-          "name": "Pose de menuiserie",
-          "description": "Installation de fenêtres, portes, volets, cloisons"
+          "name": "Plomberie et salle de bain",
+          "description": "Installation plomberie, création salle de bain, pose carrelage"
         }
       }
     ]

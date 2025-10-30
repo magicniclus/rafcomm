@@ -45,11 +45,11 @@ export default function ContactPage() {
   };
 
   const contactInfo = {
-    address: "Zones d'intervention :\nIlle-et-Vilaine (35)\nCôtes-d'Armor (22)\nManche (50)",
-    phone: "07 49 22 93 92",
-    email: "adbetton32@gmail.com",
+    address: "Zone d'intervention :\n92150 Suresnes\nÎle-de-France\nHauts-de-Seine",
+    phone: "07 58 85 02 26",
+    email: "idarenovation2022@gmail.com",
     hours: "Lundi - Vendredi: 8h00 - 18h00\nSamedi: 8h00 - 12h00",
-    mapEmbedUrl: "https://maps.google.com/maps?q=Bretagne,France&t=&z=8&ie=UTF8&iwloc=&output=embed"
+    mapEmbedUrl: "https://maps.google.com/maps?q=Suresnes,France&t=&z=12&ie=UTF8&iwloc=&output=embed"
   };
 
   return (
@@ -70,7 +70,7 @@ export default function ContactPage() {
               Contactez-nous
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-              Un projet de maçonnerie ou de pose de menuiserie ? Notre équipe est là pour vous accompagner en Bretagne et Normandie.
+              Un projet de rénovation intérieure, plomberie ou carrelage ? Notre équipe est là pour vous accompagner en Île-de-France.
             </p>
           </motion.div>
         </div>

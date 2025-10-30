@@ -21,62 +21,46 @@ export default function Home() {
   });
   const servicesData = [
     {
-      title: "Maçonnerie Générale",
-      subtitle: "Construction neuve et extension",
-      content: "Réalisation de fondations, dalles béton, murs porteurs, cloisons, escaliers en béton. Construction neuve et extension de maison avec garantie décennale.",
+      title: "Rénovation Intérieure",
+      subtitle: "Transformation complète de vos espaces",
+      content: "Rénovation complète d'appartements et maisons : cloisons, sols, peinture, électricité. Nous transformons vos espaces selon vos besoins et votre style.",
       image: "/macon.png",
       gradientFrom: "#ff7e5f",
       gradientTo: "#feb47b"
     },
     {
-      title: "Joints de Pierres",
-      subtitle: "Technique traditionnelle à l'ancienne",
-      content: "Pose de pierres naturelles et réalisation de joints de pierres à l'ancienne. Spécialisation en rénovation de bâtiments anciens avec respect des techniques traditionnelles.",
-      image: "/joint-de-pierre.png",
+      title: "Plomberie",
+      subtitle: "Installation et réparation",
+      content: "Installation et réparation de systèmes de plomberie : canalisations, robinetterie, chauffe-eau. Intervention rapide pour tous vos problèmes de plomberie.",
+      image: "/menuiserie.png",
       gradientFrom: "#667eea",
       gradientTo: "#764ba2"
     },
     {
-      title: "Ouvertures & Extensions",
-      subtitle: "Création et agrandissement",
-      content: "Création d'ouvertures dans murs porteurs, extensions de maison. Nous adaptons votre habitat à vos besoins avec expertise technique.",
+      title: "Salle de Bain",
+      subtitle: "Aménagement sur mesure",
+      content: "Création et rénovation de salles de bain complètes : carrelage, sanitaires, douche, baignoire. Design moderne et fonctionnel adapté à vos besoins.",
       image: "/extension.png",
       gradientFrom: "#28a745",
       gradientTo: "#20c997"
     },
     {
-      title: "Enduits de Façade",
-      subtitle: "Finitions extérieures",
-      content: "Application d'enduits de façade, finitions extérieures. Nous protégeons et embellissons vos murs avec des matériaux de qualité.",
+      title: "Carrelage",
+      subtitle: "Pose professionnelle",
+      content: "Pose de carrelage sol et mur, faïence, mosaïque. Travail soigné avec finitions parfaites pour tous types de revêtements céramiques.",
       image: "/facade.png",
       gradientFrom: "#fd7e14",
       gradientTo: "#ffc107"
-    },
-    {
-      title: "Assainissement",
-      subtitle: "Drainage et évacuation",
-      content: "Assainissement, drainage, murs de soutènement. Solutions complètes pour la gestion des eaux et la stabilité de vos constructions.",
-      image: "/assainissement.png",
-      gradientFrom: "#6f42c1",
-      gradientTo: "#e83e8c"
-    },
-    {
-      title: "Terrassement",
-      subtitle: "Petits travaux de terrassement",
-      content: "Petits travaux de terrassement et finitions extérieures. Préparation de terrain et aménagements pour vos projets de construction.",
-      image: "/terrassement.png",
-      gradientFrom: "#17a2b8",
-      gradientTo: "#6c757d"
     }
   ];
 
 
 
   const contactInfo = {
-    address: "8 avenues de moka\n35400 Saint-Malo\nRayon d'intervention : 50 km",
-    phone: "06 48 81 25 78",
-    email: "adbetton32@gmail.com",
-    mapEmbedUrl: "https://maps.google.com/maps?q=Saint-Malo,France&t=&z=10&ie=UTF8&iwloc=&output=embed"
+    address: "92150 Suresnes\nÎle-de-France\nRayon d'intervention : Hauts-de-Seine",
+    phone: "07 58 85 02 26",
+    email: "idarenovation2022@gmail.com",
+    mapEmbedUrl: "https://maps.google.com/maps?q=Suresnes,France&t=&z=12&ie=UTF8&iwloc=&output=embed"
   };
 
   return (
@@ -127,7 +111,7 @@ export default function Home() {
       <TeamSection config={config.team} />
       <ContactSection 
         title="Contactez-nous"
-        subtitle="Parlons de votre projet de maçonnerie générale, joints de pierres, extensions ou assainissement autour de Saint-Malo"
+        subtitle="Parlons de votre projet de rénovation intérieure, plomberie, salle de bain ou carrelage en Île-de-France"
         contactInfo={contactInfo} 
       />
 

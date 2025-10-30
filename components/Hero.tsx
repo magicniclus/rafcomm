@@ -25,12 +25,12 @@ export default function Hero({
   config,
   backgroundImage,
   backgroundVideo,
-  title = "Adbetton - Maçonnerie générale et pose de menuiserie",
-  description = "Auto-entrepreneur spécialisé dans le secteur du BTP : maçonnerie générale (gros second œuvre) et pose de menuiserie. Votre partenaire de confiance pour tous vos projets de construction et rénovation en Bretagne et Normandie.",
+  title = "Neagu Ionut - Spécialiste rénovation intérieure en Île-de-France",
+  description = "Auto-entrepreneur spécialisé dans le secteur du BTP : rénovation intérieure, plomberie, salle de bain et carrelage. Votre partenaire de confiance pour tous vos projets de rénovation en Île-de-France.",
   bulletPoints = [
-    "Auto-entrepreneur avec garantie décennale",
-    "Équipe de 2 professionnels expérimentés",
-    "Intervention en Bretagne et Normandie"
+    "Auto-entrepreneur depuis 2022",
+    "Expert en rénovation intérieure",
+    "Intervention en Île-de-France (92150)"
   ],
   googleReviewsWidget
 }: HeroProps) {
