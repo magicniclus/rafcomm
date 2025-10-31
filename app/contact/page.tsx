@@ -4,15 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { generateMetadata } from '@/lib/seo-config';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = generateMetadata(
-  "Contact - RAFCOM",
-  "Contactez RAFCOM pour vos projets de débouchage de gaines télécommunications et interventions techniques en Île-de-France. Devis gratuit et personnalisé.",
-  "/og-image.jpg",
-  "/contact"
-);
+// Metadata is handled by layout.tsx for client components
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({

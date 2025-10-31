@@ -4,15 +4,7 @@ import { motion } from 'framer-motion';
 import { Check, Home, Phone, Mail } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { generateMetadata } from '@/lib/seo-config';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = generateMetadata(
-  "Merci - RAFCOM",
-  "Merci pour votre demande. RAFCOM vous contactera sous 24h pour votre projet de débouchage de gaines télécommunications en Île-de-France.",
-  "/og-image.jpg",
-  "/merci"
-);
+// Metadata is handled by layout.tsx for client components
 
 export default function MerciPage() {
   return (
